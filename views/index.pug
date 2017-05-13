@@ -15,7 +15,7 @@ block content
           .listing
             a.square(class= site.color, href= site.link)
               .symbol= site.symbol
-              img.pic.stretch(src= site.image, alt= site.symbol)
+              img.pic.stretch(src= site.image, alt= site.symbol, style = "display:" + (site.image ? "block" : "none"))
             .info
               span.category= site.category
               span.priority= site.priority
