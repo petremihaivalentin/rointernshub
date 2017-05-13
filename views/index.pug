@@ -2,9 +2,11 @@ extends layout
 
 block content
   h1 Common Internal Microsoft Portals
-  h2=foobar
-  input#searchbar(type="search", placeholder="Search here", oninput="filter_tiles(this)")
+  input#searchbar(type="search", placeholder="Search here", oninput="filter_tiles(this)")  
   #noresults No results!
+  #animations
+    input#animationsEnabled(type="checkbox", checked="checked", class="css-checkbox")
+    label(for="animationsEnabled", class="css-label") enable animations
   #error
   #main(role="main")
     each result in results
