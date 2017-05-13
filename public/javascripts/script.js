@@ -1,3 +1,28 @@
+/* constants */
+
+var animationsEnabledDefault = true;
+var animationsDuration = 250;
+
+/* on start */
+
+$(document).ready(function () {
+    initAnimations();
+});
+
+/* animations */
+
+function initAnimations() {
+    // default is enabled
+    var animationsEnabled = JSON.parse(localStorage.getItem('animationsEnabled'));
+    animationsEnabled = animationsEnabled === null ? animationsEnabledDefault : animationsEnabled;
+    $('#animationsEnabled').prop('checked', animationsEnabled);
+}
+
+function toggleAnimations() {
+    var animationsEnabled = $("#animationsEnabled").is(":checked");
+    localStorage.setItem('animationsEnabled', JSON.stringify(animationsEnabled));
+}
+
 /* search */
 
 function filter_tiles(searchBar) {
@@ -48,7 +73,7 @@ function filter_tiles(searchBar) {
             'margin-right': '0px',
             'padding-left': '0px'
         }, {
-            duration: animationsEnabled ? 400 : 0,
+            duration: animationsEnabled ? animationsDuration : 0,
             complete: function () {
                 $(this).hide();
             }
@@ -68,7 +93,7 @@ function filter_tiles(searchBar) {
             'margin-right': '20px',
             'padding-left': '15px'
         }, {
-            duration: animationsEnabled ? 400 : 0,
+            duration: animationsEnabled ? animationsDuration : 0,
         });
         return this;
     }; 
@@ -81,7 +106,7 @@ function filter_tiles(searchBar) {
         this.animate({
             opacity: 0
         }, {
-            duration: animationsEnabled ? 400 : 0,
+            duration: animationsEnabled ?animationsDuration : 0,
             complete: function () {
                 $(this).hide();
             }
@@ -98,7 +123,7 @@ function filter_tiles(searchBar) {
         this.animate({
             opacity: 1
         }, {
-            duration: animationsEnabled ? 400 : 0,
+            duration: animationsEnabled ? animationsDuration : 0,
         });
         return this;
     }; 

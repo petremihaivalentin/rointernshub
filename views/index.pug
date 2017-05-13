@@ -5,7 +5,7 @@ block content
   input#searchbar(type="search", placeholder="Search here", oninput="filter_tiles(this)")  
   #noresults No results!
   #animations
-    input#animationsEnabled(type="checkbox", checked="checked", class="css-checkbox")
+    input#animationsEnabled(type="checkbox", class="css-checkbox", onchange="toggleAnimations()")
     label(for="animationsEnabled", class="css-label") enable animations
   #error
   #main(role="main")
