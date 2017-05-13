@@ -105,7 +105,7 @@
         "link": "http://who",
         "link_readable": "//who",
         "color": "blue",
-        "image": "img/placeholder.png",
+        "image": "images/placeholder.png",
         "symbol": "?",
         "category": "Reference",
         "priority": 1
