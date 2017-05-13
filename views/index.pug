@@ -8,18 +8,22 @@ block content
   #error
   #main(role="main")
     each result in results
-      .listing
-        a.square(class= result.color, href= result.link)
-          .symbol= result.symbol
-          img.pic.stretch(src= result.image, alt= result.symbol)
-        .info
-          span.category= result.category
-          span.priority= result.priority
-          span.title= result.title
-          br
-          span.description= result.description
-          br
-          a.link(href= result.link)= result.link_readable
+      .categorySection
+        span(class="categoryTitle")= result.category
+        hr(color="black" size="6" align="left")
+        each site in result.sites
+          .listing
+            a.square(class= site.color, href= site.link)
+              .symbol= site.symbol
+              img.pic.stretch(src= site.image, alt= site.symbol)
+            .info
+              span.category= site.category
+              span.priority= site.priority
+              span.title= site.title
+              br
+              span.description= site.description
+              br
+              a.link(href= site.link)= site.link_readable
   footer
     | Need help? Email 
     a(href="mailto:sites@microsoft.com?Subject=[support]") sites@microsoft.com
