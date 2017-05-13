@@ -1,5 +1,26 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Common Internal Microsoft Portals
+  h2=foobar
+  input#searchbar(type="search", placeholder="Search here")
+  #noresults No results!
+  #error
+  #main(role="main")
+    each result in results
+      .listing
+        a.square(class= result.color, href= result.link)
+          .symbol= result.symbol
+          img.pic.stretch(src= result.image, alt= result.symbol)
+        .info
+          span.category= result.category
+          span.priority= result.priority
+          span.title= result.title
+          br
+          span.description= result.description
+          br
+          a.link(href= result.link)= result.link_readable
+  footer
+    | Need help? Email 
+    a(href="mailto:sites@microsoft.com?Subject=[support]") sites@microsoft.com
+    |  with [support] in the subject line.
