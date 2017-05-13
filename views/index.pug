@@ -3,7 +3,7 @@ extends layout
 block content
   h1 Common Internal Microsoft Portals
   h2=foobar
-  input#searchbar(type="search", placeholder="Search here")
+  input#searchbar(type="search", placeholder="Search here", oninput="filter_tiles(this)")
   #noresults No results!
   #error
   #main(role="main")
@@ -28,3 +28,8 @@ block content
     | Need help? Email 
     a(href="mailto:sites@microsoft.com?Subject=[support]") sites@microsoft.com
     |  with [support] in the subject line.
+
+block scripts
+  script(src='https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js')
+  script window._ || document.write('<script src="javascripts/vendor/lodash-4.17.4.min.js"><\/script>')
+  script(src='/javascripts/script.js')
