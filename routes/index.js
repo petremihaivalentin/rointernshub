@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
                               .map(function(value, key) { return {'category': key, 'sites': value}})
                               .sortBy(function(g) { return _.medianBy(g.sites, 'priority') }, 'category')
                               .value();
-  res.render('index', { title: 'Sites', description: 'Common Internal Microsoft Portals', results: groupedSites });
+  res.render('index', { title: 'mssites', description: 'Common Internal Microsoft Portals', results: groupedSites });
 });
 
 module.exports = router;
