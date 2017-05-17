@@ -1,7 +1,10 @@
 extends layout
 
 block content
-  h1 Common Internal Microsoft Portals
+  h1 
+    | Common Internal Microsoft Portals
+    br
+    a(href="https://aka.ms/mssites") aka.ms/mssites
   input#searchbar(type="search", placeholder="Search here", oninput="filter_tiles(this)")  
   #noresults No results!
   #animations
@@ -27,9 +30,11 @@ block content
               br
               a.link(href= site.link)= site.link_readable
   footer
-    | Need help? Email 
-    a(href="mailto:sites@microsoft.com?Subject=[support]") sites@microsoft.com
-    |  with [support] in the subject line.
+    | Need help? Join us on 
+    a(href="https://aka.ms/mssites_support") Microsoft Teams
+    |  or just 
+    a(href="mailto:1e6bf067.microsoft.com@amer.teams.ms") send an email
+    |  for bug reports, site suggestions, and feature requests.
 
 block scripts
   script(src='https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js')
