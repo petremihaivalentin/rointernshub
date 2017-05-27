@@ -7,20 +7,48 @@ var animationsDuration = 250;
 
 $(document).ready(function () {
     initAnimations();
+    initCategoryToggle();
 });
 
 /* animations */
 
 function initAnimations() {
+    $('#animationsEnabled').prop('checked', isAnimationEnabled());
+}
+
+function isAnimationEnabled() {
     // default is enabled
     var animationsEnabled = JSON.parse(localStorage.getItem('animationsEnabled'));
-    animationsEnabled = animationsEnabled === null ? animationsEnabledDefault : animationsEnabled;
-    $('#animationsEnabled').prop('checked', animationsEnabled);
+    return animationsEnabled === null ? animationsEnabledDefault : animationsEnabled;
 }
 
 function toggleAnimations() {
     var animationsEnabled = $("#animationsEnabled").is(":checked");
     localStorage.setItem('animationsEnabled', JSON.stringify(animationsEnabled));
+}
+
+/* Category Toggle */
+function initCategoryToggle() {
+    $(".categoryTitle").each(function() {
+        $(this).before(
+            $("<span></span>")
+                .addClass("categoryToggle")
+                .text("\u25BC")
+                .click(toggleCategory)
+        );
+    });
+}
+
+function toggleCategory() {
+    var categories = $(this).siblings(".categories");
+    if (isAnimationEnabled()) {
+        categories.slideToggle();
+    } else {
+        categories.toggle();
+    }
+    $(this).text(function(_, text) {
+        return text === "\u25BC" ? 	"\u25B6" : "\u25BC"
+    });
 }
 
 /* search */

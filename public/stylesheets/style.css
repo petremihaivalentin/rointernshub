@@ -340,6 +340,11 @@ footer {
     font-size: 30px;
 }
 
+.categoryToggle {
+    font-size: 15px;
+    margin-right: 5px;
+}
+
 .listing {
     opacity:  1;
     border-color: black;

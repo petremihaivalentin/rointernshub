@@ -16,19 +16,20 @@ block content
       .categorySection
         span(class="categoryTitle")= result.category
         hr(color="black" size="6" align="left")
-        each site in result.sites
-          .listing
-            a.square(class= site.color, href= site.link)
-              .symbol= site.symbol
-              img.pic.stretch(src= site.image, alt= site.symbol, style = "display:" + (site.image ? "block" : "none"))
-            .info
-              span.category= site.category
-              span.priority= site.priority
-              span.title= site.title
-              br
-              span.description= site.description
-              br
-              a.link(href= site.link)= site.link_readable
+        .categories
+          each site in result.sites
+            .listing
+              a.square(class= site.color, href= site.link)
+                .symbol= site.symbol
+                img.pic.stretch(src= site.image, alt= site.symbol, style = "display:" + (site.image ? "block" : "none"))
+              .info
+                span.category= site.category
+                span.priority= site.priority
+                span.title= site.title
+                br
+                span.description= site.description
+                br
+                a.link(href= site.link)= site.link_readable
   footer
     | Need help? Join us on 
     a(href="https://aka.ms/mssites_support") Microsoft Teams
