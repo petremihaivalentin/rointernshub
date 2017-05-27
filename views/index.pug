@@ -5,18 +5,19 @@ block content
     | Common Internal Microsoft Portals
     br
     a(href="https://aka.ms/mssites") aka.ms/mssites
-  input#searchbar(type="search", placeholder="Search here", oninput="filter_tiles(this)")  
+  input#searchbar(type="search", placeholder="Search here")
   #noresults No results!
   #animations
-    input#animationsEnabled(type="checkbox", class="css-checkbox", onchange="toggleAnimations()")
+    input#animationsEnabled(type="checkbox", class="css-checkbox")
     label(for="animationsEnabled", class="css-label") enable animations
   #error
   #main(role="main")
     each result in results
       .categorySection
+        span(class="categoryToggle")= "\u25BC"
         span(class="categoryTitle")= result.category
         hr(color="black" size="6" align="left")
-        .categories
+        .sites
           each site in result.sites
             .listing
               a.square(class= site.color, href= site.link)
