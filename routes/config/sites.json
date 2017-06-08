@@ -30,6 +30,16 @@
         "priority": 3
     },
     {
+        "title": "Facilities",
+        "description": "Central hub for maintenance and facility requests.",
+        "link": "https://msfacilities.com/",
+        "link_readable": "//msfacilities.com",
+        "color": "red",
+        "symbol": "F",
+        "category": "MSFT",
+        "priority": 6
+    },
+    {
         "title": "IT Web",
         "description": "Find service alerts, create service request, PC setup, direct access, and more from Microsoft IT.",
         "link": "http://itweb",
@@ -232,7 +242,7 @@
     },
     {
         "title": "Products Web",
-        "description": "Download virtually any Microsoft product, from DOS 3.1 to Visual Studio 2015.",
+        "description": "Download virtually any Microsoft product, from DOS 3.1 to Visual Studio 2017.",
         "link": "http://productsweb/",
         "link_readable": "//productsweb",
         "color": "green",
@@ -323,12 +333,42 @@
     {
         "title": "Apps Portal",
         "description": "Download internal and dogfood apps for your smartphone (iOS, Android, Windows), PC, or Mac.",
-        "link": "https://dlwapps.cloudapp.net/Home/Index",
-        "link_readable": "//aka.ms/apps",
+        "link": "http://appsportal",
+        "link_readable": "//appsportal",
         "color": "darkblue",
         "symbol": "AP",
         "category": "Software",
         "priority": 6
+    },
+    {
+        "title": "Open Source At Microsoft",
+        "description": "Open source projects, platforms, and programming languages that Microsoft contributes to.",
+        "link": "https://opensource.microsoft.com/",
+        "link_readable": "opensource.microsoft.com",
+        "color": "red",
+        "symbol": "OS",
+        "category": "Software",
+        "priority": 7
+    },
+    {
+        "title": "Outlook Webmail",
+        "description": "Check your email from your browser.",
+        "link": "https://outlook.office.com/owa/",
+        "link_readable": "outlook.office.com/owa",
+        "color": "pink",
+        "symbol": "OW",
+        "category": "Software",
+        "priority": 8
+    },
+    {
+        "title": "Install Office",
+        "description": "Install office to your machine.",
+        "link": "https://portal.office.com/OLS/MySoftware.aspx",
+        "link_readable": "portal.office.com/OLS/MySoftware.aspx",
+        "color": "darkgreen",
+        "symbol": "O",
+        "category": "Software",
+        "priority": 9
     },
     {
         "title": "Account Management Tool",
@@ -491,12 +531,12 @@
         "priority": 1
     },
     {
-        "title": "Mrs. What",
-        "description": "Microsoft's social glossary of team-specific terms and acronyms.",
-        "link": "http://what/",
-        "link_readable": "//what",
+        "title": "Glossary",
+        "description": "Microsoft's glossary of terms and acronyms.",
+        "link": "https://microsoft.sharepoint.com/sites/msw/Company/Glossary/Pages/default.aspx",
+        "link_readable": "//Glossary",
         "color": "indigo",
-        "symbol": "W",
+        "symbol": "G",
         "category": "Reference",
         "priority": 2
     },
@@ -519,5 +559,25 @@
         "symbol": "Ex",
         "category": "Career",
         "priority": 3
+    },
+    {
+        "title": "Infopedia",
+        "description": "Get required and optional training.",
+        "link": "https://microsoft.sharepoint.com/sites/infopedia/",
+        "link_readable": "//infopedia",
+        "color": "orange",
+        "symbol": "IP",
+        "category": "Career",
+        "priority": 10
+    },
+    {
+        "title": "Infopedia Media",
+        "description": "Professional videos relating to microsoft.",
+        "link": "https://microsoft.sharepoint.com/sites/infopedia/media",
+        "link_readable": "//infopedia/media",
+        "color": "darkgreen",
+        "symbol": "IM",
+        "category": "Career",
+        "priority": 11
     }
 ]
