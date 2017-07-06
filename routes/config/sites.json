@@ -579,5 +579,16 @@
         "symbol": "IM",
         "category": "Career",
         "priority": 11
+    },
+    {
+        "title": "Interns",
+        "description": "Events, links, and resources for interns.",
+        "link": "https://microsoft.sharepoint.com/teams/microsoft_intern/SitePages/Home.aspx",
+        "link_readable": "aka.ms/interns",
+        "color": "purple",
+        "symbol": "I",
+        "category": "Career",
+        "priority": 2,
+        "image": "/images/fractal_panda.jpg"
     }
 ]
