@@ -1,13 +1,24 @@
+// setup app insights before anything else
+// to test with analytics, supply an ID in the environment variable below, or replace the placeholder
+const appInsights = require("applicationinsights");
+var iKey = process.env["APPINSIGHTS_INSTRUMENTATIONKEY"] || "placeholder";
+appInsights.setup(iKey).start();
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var proxy = require('http-proxy-middleware');
 
 var index = require('./routes/index');
 
 var app = express();
+
+// analytics routing
+// must be placed before bodyParser
+app.use('/ai', proxy({ target: 'https://dc.services.visualstudio.com', changeOrigin: true, pathRewrite: { '^/ai': '' } }));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -20,6 +31,23 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// imported resources
+app.use('/dist/ai.0.js', express.static(__dirname + '/node_modules/applicationinsights-js/dist/ai.0.js'));
+
+// request helpers
+function getUpn(req) {
+    var upnHeader = req.headers["x-ms-client-principal-name"];
+    return upnHeader || "local";
+}
+
+// setup analytics
+app.locals.iKey = iKey;
+app.use((req, res, next) => {
+    res.locals.upn = getUpn(req);
+    next();
+});
+
+// index
 app.use('/', index);
 
 // catch 404 and forward to error handler

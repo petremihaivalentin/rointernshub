@@ -1,8 +1,12 @@
+const appInsights = require("applicationinsights");
+
 var express = require('express');
 var router = express.Router();
 
 // GET home page
 router.get('/', function (req, res, next) {
+    appInsights.defaultClient.trackRequest({ request: req, response: res });
+
     // setup lodash
     var _ = require('lodash');
     _.mixin({
@@ -18,7 +22,11 @@ router.get('/', function (req, res, next) {
         .sortBy(g => _.medianBy(g.sites, 'priority'), 'category')
         .value();
 
-    res.render('index', { title: 'mssites', description: 'Common Internal Microsoft Portals', sitesGroupedByCategory: sitesGroupedByCategory });
+    res.render('index', {
+        title: 'mssites',
+        description: 'Common Internal Microsoft Portals',
+        sitesGroupedByCategory: sitesGroupedByCategory
+    });
 });
 
 module.exports = router;
