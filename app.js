@@ -2,7 +2,16 @@
 // to test with analytics, supply an ID in the environment variable below, or replace the placeholder
 const appInsights = require("applicationinsights");
 var iKey = process.env["APPINSIGHTS_INSTRUMENTATIONKEY"] || "placeholder";
-appInsights.setup(iKey).start();
+appInsights
+    .setup(iKey)
+    .setAutoDependencyCorrelation(true)
+    .setAutoCollectRequests(false)
+    .setAutoCollectPerformance(false)
+    .setAutoCollectExceptions(true)
+    .setAutoCollectDependencies(true)
+    .setAutoCollectConsole(false)
+    .setUseDiskRetryCaching(true)
+    .start();
 
 var express = require('express');
 var path = require('path');
