@@ -1,47 +1,53 @@
 extends layout
 
 block content
-  h1 
-    | Common Internal Microsoft Portals
-    br
-    a(href="https://aka.ms/mssites") aka.ms/mssites
-  input#searchbar(type="search", placeholder="Search here", autofocus)
-  #noresults No results!
-  #animations
-    input#animationsEnabled(type="checkbox", class="css-checkbox")
-    label(for="animationsEnabled", class="css-label") enable animations
-  #error
-  #main(role="main")
-    each result in results
-      .categorySection
+    h1 
+        | Common Internal Microsoft Portals
+        br
+        a(href="https://aka.ms/mssites") aka.ms/mssites
+    input#searchbar(type="search", placeholder="Search here", autofocus)
+    #noresults No results!
+    #animations
+        input#animationsEnabled(type="checkbox", class="css-checkbox")
+        label(for="animationsEnabled", class="css-label") enable animations
+    #error
+    #main(role="main")
+        each categoryGroup in sitesGroupedByCategory
+            +category(categoryGroup)
+    footer
+        | Need help? Join us on 
+        a(href="https://aka.ms/mssites_support") Microsoft Teams
+        |  or just 
+        a(href="mailto:1e6bf067.microsoft.com@amer.teams.ms") send an email
+        |  for bug reports, site suggestions, and feature requests.
+
+mixin category(categoryGroup)
+    .categorySection
         span(class="categoryToggle")= "\u25BC"
-        span(class="categoryTitle")= result.category
+        span(class="categoryTitle")= categoryGroup.category
         hr(color="black" size="6" align="left")
         .sites
-          each site in result.sites
-            .listing
-              a.square(class= site.color, href= site.link)
-                .symbol= site.symbol
-                img.pic.stretch(src= site.image, alt= site.symbol, style = "display:" + (site.image ? "block" : "none"))
-              .info
-                span.category= site.category
-                span.priority= site.priority
-                span.title= site.title
-                br
-                span.description= site.description
-                br
-                a.link(href= site.link)= site.link_readable
-  footer
-    | Need help? Join us on 
-    a(href="https://aka.ms/mssites_support") Microsoft Teams
-    |  or just 
-    a(href="mailto:1e6bf067.microsoft.com@amer.teams.ms") send an email
-    |  for bug reports, site suggestions, and feature requests.
+            each site in categoryGroup.sites
+                +listing(site)
+
+mixin listing(site)
+    .listing
+        a.square(class= site.color, href= site.link)
+            .symbol= site.symbol
+            img.pic.stretch(src= site.image, alt= site.symbol, style = "display:" + (site.image ? "block" : "none"))
+        .info
+            span.category= site.category
+            span.priority= site.priority
+            span.title= site.title
+            br
+            span.description= site.description
+            br
+            a.link(href= site.link)= site.link_readable
 
 block scripts
-  script(src='https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js')
-  script window._ || document.write('<script src="/javascripts/vendor/lodash-4.17.4.min.js"><\/script>')
-  script(src='/javascripts/script.js')
+    script(src='https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js')
+    script window._ || document.write('<script src="/javascripts/vendor/lodash-4.17.4.min.js"><\/script>')
+    script(src='/javascripts/script.js')
 
 block preload
-  img(src='/images/checkbox.png')
+    img(src='/images/checkbox.png')

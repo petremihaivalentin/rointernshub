@@ -6,16 +6,20 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "applicationinsights": "~0.22.0",
+    "applicationinsights-js": "^1.0.12",
     "body-parser": "~1.17.1",
+    "circular-json": "~0.3.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
-    "express": "~4.15.2",
-    "morgan": "~1.8.1",
-    "pug": "~2.0.0-beta11",
-    "serve-favicon": "~2.4.2",
-    "lodash": "~4.17.4",
     "eslint": "~3.19.0",
-    "eslint-plugin-lodash": "~2.4.2",
-    "gulp":"~3.9.1"
+    "eslint-plugin-lodash": "^2.4.5",
+    "express": "^4.15.4",
+    "gulp": "~3.9.1",
+    "http-proxy-middleware": "^0.17.4",
+    "lodash": "~4.17.4",
+    "morgan": "~1.8.1",
+    "pug": "^2.0.0-rc.4",
+    "serve-favicon": "~2.4.2"
   }
 }
