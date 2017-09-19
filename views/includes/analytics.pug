@@ -7,6 +7,19 @@ script.
         endpointUrl: "/ai/v2/track",
     });
 
+    function getQueryParameter(name, remove) {
+        var match = RegExp("([?]|.*[&])" + name + "=([^&\n]*)&?(.*)").exec(window.location.search);
+        if (match) {
+            if (remove) {
+                var search = match[1] + match[3];
+                var newPath = window.location.pathname + (search === "?" ? "" : search);
+                window.history.replaceState(null, null, newPath);
+            }
+            return decodeURIComponent(match[2].replace(/\+/g, " "));
+        }
+        return "";
+    }
+
     window.appInsights = appInsights;
     appInsights.setAuthenticatedUserContext("#{upn}");
-    appInsights.trackPageView();
+    appInsights.trackPageView(null, null, {"source": getQueryParameter("refhost", true) });

@@ -17,6 +17,8 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
     <Content Include=".eslintrc.json" />
+    <Content Include="external\nginx" />
+    <Content Include="external\aka.ms" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Compile Include="app.js" />
@@ -39,6 +41,7 @@
   <ItemGroup>
     <Folder Include="bin" />
     <Folder Include="mssites" />
+    <Folder Include="external\" />
     <Folder Include="public" />
     <Folder Include="public\images" />
     <Folder Include="public\javascripts" />
