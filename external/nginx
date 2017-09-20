@@ -1,0 +1,12 @@
+# nginx redirect server configuration
+server {
+    # http
+    listen [::]:80;
+    listen 80;
+
+    # listen on old corpnet names
+    server_name how sites;
+
+    # redirect to mssites
+    return 301 https://mssites.azurewebsites.net?refhost=$host;
+}
