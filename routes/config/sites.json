@@ -112,7 +112,7 @@
     },
     {
         "title": "System Setup",
-        "description": "Set up your system (laptop or desktop) and remote connectivity",
+        "description": "Set up your system (laptop or desktop) and remote connectivity.",
         "link": "https://microsoft.sharepoint.com/teams/SupportMadeEasy/SitePages/Home.aspx",
         "link_readable": "aka.ms/supportmadeeasy",
         "color": "purple",
@@ -122,7 +122,7 @@
     },
     {
         "title": "Parking",
-        "description": "Register your vehicle for parking",
+        "description": "Register your vehicle for parking.",
         "link": "https://microsoft.sharepoint.com/sites/refweb/na/Redmond/Transportation/Parking/Pages/default.aspx",
         "link_readable": "aka.ms/parking",
         "color": "purple",
@@ -142,7 +142,7 @@
     },
     {
         "title": "Benefits",
-        "description": "Read about and enroll for benefits",
+        "description": "Read about and enroll for benefits.",
         "link": "https://benefits.microsoft.ehr.com/",
         "link_readable": "aka.ms/benefits",
         "color": "green",
@@ -152,7 +152,7 @@
     },
     {
         "title": "Orca",
-        "description": "Get an Orca Card for free public transportation",
+        "description": "Get an Orca Card for free public transportation.",
         "link": "https://microsoft.sharepoint.com/sites/refweb/NA/Redmond/Transportation/Pages/default.aspx",
         "link_readable": "aka.ms/commute",
         "color": "blue",
@@ -520,5 +520,75 @@
         "category": "Career",
         "priority": 2,
         "image": "/images/fractal_panda.jpg"
+    },
+    {
+        "title": "Report It Now",
+        "description": "Report physical or cyber security concerns.",
+        "link": "https://microsoft.sharepoint.com/sites/security/Pages/ReportItNow.aspx",
+        "link_readable": "aka.ms/reportitnow",
+        "color": "red",
+        "symbol": "R",
+        "category": "Security",
+        "priority": 2
+    },
+    {
+        "title": "3D Status",
+        "description": "Check the status of 3D printer jobs.",
+        "link": "https://3dstatus.azurewebsites.net/",
+        "link_readable": "aka.ms/3dstatus",
+        "color": "darkblue",
+        "symbol": "3D",
+        "category": "Perks",
+        "priority": 8
+    },
+    {
+        "title": "The Garage",
+        "description": "Microsoft's own hobby workshop. Turn your ideas into shippable reality.",
+        "link": "https://microsoft.sharepoint.com/teams/garage/Pages/default.aspx",
+        "link_readable": "aka.ms/garage",
+        "color": "red",
+        "symbol": "G",
+        "category": "MSFT",
+        "priority": 3
+    },
+    {
+        "title": "Phone Registration",
+        "description": "Register your phone for two-factor auth.",
+        "link": "https://phoneregistration.microsoft.com/",
+        "link_readable": "aka.ms/ringring",
+        "color": "blue",
+        "symbol": "RR",
+        "category": "Security",
+        "priority": 4
+    },
+    {
+        "title": "Quick Assistance",
+        "description": "Advocate on behalf of a customer experiencing product or support issues.",
+        "link": "https://quickassistance.azurewebsites.net/",
+        "link_readable": "aka.ms/quick",
+        "color": "red",
+        "symbol": "Q",
+        "category": "Support",
+        "priority": 4
+    },
+    {
+        "title": "Resnet",
+        "description": "Microsoft Research (MSR) talks, classes, and videos.",
+        "link": "https://resnet.microsoft.com/",
+        "link_readable": "aka.ms/resnet",
+        "color": "yellow",
+        "symbol": "R",
+        "category": "Perks",
+        "priority": 3
+    },
+    {
+        "title": "One Engineering System",
+        "description": "Learn about the efforts to provide a unified engineering system to Microsoft.",
+        "link": "https://www.1eswiki.com/wiki/Main_Page",
+        "link_readable": "aka.ms/1es",
+        "color": "darkblue",
+        "symbol": "1",
+        "category": "Reference",
+        "priority": 2
     }
 ]
