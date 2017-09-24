@@ -46,7 +46,7 @@ function filter_tiles() {
 
     // filter listings
     _.forEach($('.listing'), function(listing) {
-        if (!_.includes($(listing).text(), search)) {
+        if (!$(listing).includesSearch(search)) {
             $(listing).gentleSlideOut(animated);
         }
         else {
@@ -147,5 +147,12 @@ function filter_tiles() {
 
     $.fn.toggleText = function(a, b) {
         return this.text(this.text() == b ? a : b);
+    };
+
+    $.fn.includesSearch = function (searchText) {
+        return _.includes(this.find(".title").text(), searchText)
+            || _.includes(this.find(".description").text(), searchText)
+            || _.includes(this.find(".link").text(), searchText)
+            || _.includes(this.find(".link").attr("href"), searchText);
     };
 })(jQuery);
