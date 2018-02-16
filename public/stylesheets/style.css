@@ -429,7 +429,7 @@ footer {
 
 .red { background-color: crimson; }
 .orange { background-color: orange; }
-.yellow { background-color: gold; }
+.yellow { background-color: #ffcf00; }
 .green { background-color: lightgreen; }
 .darkgreen { background-color: #46c969; }
 .blue { background-color: lightblue; }
