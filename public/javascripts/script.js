@@ -1,6 +1,7 @@
 /* constants */
 
 var ANIMATIONS_ENABLED_DEFAULT = true;
+var OPEN_LINKS_IN_NEW_TAB_DEFAULT = false;
 var ANIMATION_DURATION = 250;
 
 /* on start */
@@ -12,11 +13,16 @@ $(document).ready(function () {
 
 function initState() {
     $('#animationsEnabled').prop('checked', isAnimationEnabled());
+    $('#openLinksInNewTab').prop('checked', shouldOpenLinksInNewTab());
+    if (shouldOpenLinksInNewTab()) {
+        configureLinkTargets();
+    }
 }
 
 function initHandlers() {
     $('#searchbar').on('input', filter_tiles);
     $('#animationsEnabled').change(toggleAnimations);
+    $('#openLinksInNewTab').change(toggleOpenLinksInNewTab);
     $('.categoryToggle').click(toggleCategory);
 }
 
@@ -27,11 +33,29 @@ function isAnimationEnabled() {
     return animationsEnabled === null ? ANIMATIONS_ENABLED_DEFAULT : animationsEnabled;
 }
 
+function shouldOpenLinksInNewTab() {
+    var openLinksInNewTab = JSON.parse(localStorage.getItem('openLinksInNewTab'));
+    return openLinksInNewTab === null ? OPEN_LINKS_IN_NEW_TAB_DEFAULT : openLinksInNewTab;
+}
+
+/* configure */
+
+function configureLinkTargets() {
+    var target = shouldOpenLinksInNewTab() ? "_blank" : "_self";
+    $("a.link").attr("target", target);
+}
+
 /* handlers */
 
 function toggleAnimations() {
     var animationsEnabled = $("#animationsEnabled").is(":checked");
     localStorage.setItem('animationsEnabled', JSON.stringify(animationsEnabled));
+}
+
+function toggleOpenLinksInNewTab() {
+    var openLinksInNewTab = $("#openLinksInNewTab").is(":checked");
+    localStorage.setItem('openLinksInNewTab', JSON.stringify(openLinksInNewTab));
+    configureLinkTargets();
 }
 
 function toggleCategory() {

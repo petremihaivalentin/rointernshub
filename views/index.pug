@@ -10,6 +10,9 @@ block content
     #animations
         input#animationsEnabled(type="checkbox", class="css-checkbox")
         label(for="animationsEnabled", class="css-label") enable animations
+        br
+        input#openLinksInNewTab(type="checkbox", class="css-checkbox")
+        label(for="openLinksInNewTab", class="css-label") open links in new tab
     #error
     #main(role="main")
         each categoryGroup in sitesGroupedByCategory
@@ -32,7 +35,7 @@ mixin category(categoryGroup)
 
 mixin listing(site)
     .listing
-        a.square(class= site.color, href= site.link)
+        a.square.link(class= site.color, href= site.link)
             .symbol= site.symbol
             img.pic.stretch(src= site.image, alt= site.symbol, style = "display:" + (site.image ? "block" : "none"))
         .info
