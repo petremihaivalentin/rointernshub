@@ -590,5 +590,85 @@
         "symbol": "1",
         "category": "Reference",
         "priority": 2
+    },
+    {
+        "title": "Food Trucks @ Microsoft",
+        "description": "Find food trucks on camps.",
+        "link": "https://microsoft.sharepoint.com/sites/refweb/na/Redmond/dining/Pages/FoodTruckSchedules.aspx",
+        "link_readable": "aka.ms/foodtrucks",
+        "color": "yellow",
+        "symbol": "FT",
+        "category": "MSFT",
+        "priority": 6
+    },
+    {
+        "title": "Global Security Access Management",
+        "description": "Manage building access, security, and more.",
+        "link": "https://microsoft.sharepoint.com/sites/security/Services/GSAM",
+        "link_readable": "aka.ms/gsam",
+        "color": "darkblue",
+        "symbol": "GS",
+        "category": "Security",
+        "priority": 3
+    },
+    {
+        "title": "Total Rewards",
+        "description": "See your cash, stock, and benefits rewards",
+        "link": "https://secure.trpmicrosoft.com/trp/Pages/TotalRewards.aspx",
+        "link_readable": "aka.ms/totalrewards",
+        "color": "darkgreen",
+        "symbol": "TR",
+        "category": "Career",
+        "priority": 2
+    },
+    {
+        "title": "SAW Wiki",
+        "description": "Learn about Secure Admin Workstations and get help.",
+        "link": "https://microsoft.sharepoint.com/teams/AzureSecurityCompliance/Security/SitePages/SAW%20Wiki.aspx",
+        "link_readable": "aka.ms/cnesaw",
+        "color": "red",
+        "symbol": "S",
+        "category": "Support",
+        "priority": 3
+    },
+    {
+        "title": "IcM",
+        "description": "Keep services healthy with Microsoft's Incident Management System.",
+        "link": "https://icm.ad.msft.net/imp/v3/incidents/search/basic",
+        "link_readable": "aka.ms/icm",
+        "color": "red",
+        "symbol": "I",
+        "category": "Reference",
+        "priority": 4
+    },
+    {
+        "title": "AV Link",
+        "description": "Get audio-visual support for phones, projectors, and other hardware.",
+        "link": "https://microsoft.sharepoint.com/sites/itweb/avsupport",
+        "link_readable": "aka.ms/avlink",
+        "color": "darkblue",
+        "symbol": "AV",
+        "category": "Support",
+        "priority": 5
+    },
+    {
+        "title": "Give",
+        "description": "Get Microsoft to match your donations (time and money) to causes you care about.",
+        "link": "https://microsoft.sharepoint.com/sites/give/Pages/Home.aspx",
+        "link_readable": "aka.ms/give",
+        "color": "indigo",
+        "symbol": "G",
+        "category": "Perks",
+        "priority": 3
+    },
+    {
+        "title": "Arcade Machines @ Microsoft",
+        "description": "Discover arcade machines across Microsoft (internal only).",
+        "link": "http://arcademachines/",
+        "link_readable": "//arcademachines",
+        "color": "yellow",
+        "symbol": "Ar",
+        "category": "Perks",
+        "priority": 6
     }
 ]

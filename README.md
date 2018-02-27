@@ -3,7 +3,7 @@ A collection of common Microsoft internal portals.
 
 Hosted on Azure and published to [aka.ms/mssites](https://aka.ms/mssites).
 
-Formerly hosted on SiteBox, first as [http://how](//how) then [http://sites](//sites) (will eventually redirect to new site).
+Formerly hosted on SiteBox, first as [http://how](//how) then [http://sites](//sites) (now redirected to the new site).
 
 # Getting Started
 The site runs on node.js, using the Express framework and Pug for templating.

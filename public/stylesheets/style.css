@@ -222,7 +222,7 @@ html {
     overflow-y: scroll;
     
     font-family: Segoe UI;
-    font-weight: 200;
+    font-weight: normal;
     font-size: 20px;
 }
 
@@ -289,14 +289,16 @@ hr {
 }
 
 #noresults {
-    display:  inline-block;
+    display:  block;
     opacity:  0;
-    margin-left: 10px;
+    display: none;
+    margin-top: 10px;
 }
 
 #searchbar {
     font-weight: 200;
     width: 300px;
+    vertical-align: bottom;
 }
 
 #animations {
@@ -331,13 +333,16 @@ label.css-label {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  overflow: hidden;
 }
 
 footer {
+    font-weight: 200;
 }
 
 .categoryTitle {
     font-size: 30px;
+    font-weight: 200;
 }
 
 .categoryToggle {
@@ -362,8 +367,6 @@ footer {
     margin-bottom: 20px;
     
     white-space: nowrap;
-    
-    font-weight: normal;
 }
 
 .square {
@@ -427,9 +430,64 @@ footer {
     
 }
 
+.gear {
+    width: 32px;
+    height: 32px;
+    outline: none;
+    vertical-align: sub;
+    padding: 0px;
+    border: none;
+}
+
+.clickable-image {
+    position: relative;
+}
+
+.clickable-image:active {
+    top: 2px;
+    left: 2px;
+}
+
+.highlightable {
+    border-radius: 10px;
+    background-color: transparent;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+
+.highlighted {
+    border-radius: 10px;
+    background-color: #FDFF47;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+
+.floating-dropdown {
+    position: absolute;
+    background-color: Gainsboro;;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    box-shadow: 2px 2px 2px black;
+}
+
+#settings {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.setting {
+    padding-bottom: 5px;
+}
+
 .red { background-color: crimson; }
 .orange { background-color: orange; }
-.yellow { background-color: gold; }
+.yellow { background-color: #ffcf00; }
 .green { background-color: lightgreen; }
 .darkgreen { background-color: #46c969; }
 .blue { background-color: lightblue; }

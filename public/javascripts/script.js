@@ -1,6 +1,7 @@
 /* constants */
 
 var ANIMATIONS_ENABLED_DEFAULT = true;
+var OPEN_LINKS_IN_NEW_TAB_DEFAULT = false;
 var ANIMATION_DURATION = 250;
 
 /* on start */
@@ -12,12 +13,25 @@ $(document).ready(function () {
 
 function initState() {
     $('#animationsEnabled').prop('checked', isAnimationEnabled());
+    $('#openLinksInNewTab').prop('checked', shouldOpenLinksInNewTab());
+
+    $('#animationsEnabled-legacy').prop('checked', isAnimationEnabled());
+
+    if (shouldOpenLinksInNewTab()) {
+        configureLinkTargets();
+    }
 }
 
 function initHandlers() {
     $('#searchbar').on('input', filter_tiles);
-    $('#animationsEnabled').change(toggleAnimations);
-    $('.categoryToggle').click(toggleCategory);
+    $('#animationsEnabled').on('change', toggleAnimations);
+    $('#openLinksInNewTab').on('change', toggleOpenLinksInNewTab);
+    $('.categoryToggle').on('click', toggleCategory);
+
+    $('#animationsEnabled-legacy').on('change', highlightSettings);
+
+    $('#settings-gear').on('click', toggleSettings);
+    $('html').onExcept('click', '#settings *', hideSettings);
 }
 
 /* state */
@@ -27,11 +41,48 @@ function isAnimationEnabled() {
     return animationsEnabled === null ? ANIMATIONS_ENABLED_DEFAULT : animationsEnabled;
 }
 
+function shouldOpenLinksInNewTab() {
+    var openLinksInNewTab = JSON.parse(localStorage.getItem('openLinksInNewTab'));
+    return openLinksInNewTab === null ? OPEN_LINKS_IN_NEW_TAB_DEFAULT : openLinksInNewTab;
+}
+
+/* configure */
+
+function configureLinkTargets() {
+    var target = shouldOpenLinksInNewTab() ? "_blank" : "_self";
+    $("a.link").attr("target", target);
+}
+
 /* handlers */
+
+function toggleSettings() {
+    $("#settings-list").toggleClass("invisible");
+}
+
+function hideSettings() {
+    $("#settings-list").addClass("invisible");
+}
+
+function highlightSettings() {
+    // make sure this checkbox doesn't actually toggle on its own
+    $('#animationsEnabled-legacy').prop('checked', isAnimationEnabled());
+    // highlight the new setting and how to get there
+    toggleSettings();
+    $('#settings-gear').highlight();
+    $('#animationsEnabled + label').highlight();
+}
 
 function toggleAnimations() {
     var animationsEnabled = $("#animationsEnabled").is(":checked");
     localStorage.setItem('animationsEnabled', JSON.stringify(animationsEnabled));
+
+    $('#animationsEnabled-legacy').prop('checked', animationsEnabled);
+}
+
+function toggleOpenLinksInNewTab() {
+    var openLinksInNewTab = $("#openLinksInNewTab").is(":checked");
+    localStorage.setItem('openLinksInNewTab', JSON.stringify(openLinksInNewTab));
+    configureLinkTargets();
 }
 
 function toggleCategory() {
@@ -72,6 +123,8 @@ function filter_tiles() {
         $('#noresults').gentleFadeOut(animated);
     }
 }
+
+/* jquery extensions */
 
 (function( $ ){
     /* gentle animations */
@@ -142,6 +195,13 @@ function filter_tiles() {
         });
         return this;
     };
+    $.fn.highlight = function() {
+        if (!$(this).hasClass("highlighted")) {
+            $(this).addClass("highlighted");
+            setTimeout(() => $(this).removeClass("highlighted"), 1000);
+        }
+        return this;
+    };
 
     /* util */
 
@@ -155,4 +215,15 @@ function filter_tiles() {
             || _.includes(this.find(".link").text(), searchText)
             || _.includes(this.find(".link").attr("href"), searchText);
     };
+
+    /* event */
+
+    $.fn.onExcept = function(eventName, exceptSelector, func) {
+        return $(this).on(eventName, e => {
+            if (!$(e.target).is(exceptSelector)) {
+                func(e);
+            }
+        });
+    };
+
 })(jQuery);
