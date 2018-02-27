@@ -14,6 +14,9 @@ $(document).ready(function () {
 function initState() {
     $('#animationsEnabled').prop('checked', isAnimationEnabled());
     $('#openLinksInNewTab').prop('checked', shouldOpenLinksInNewTab());
+
+    $('#animationsEnabled-legacy').prop('checked', isAnimationEnabled());
+
     if (shouldOpenLinksInNewTab()) {
         configureLinkTargets();
     }
@@ -21,9 +24,14 @@ function initState() {
 
 function initHandlers() {
     $('#searchbar').on('input', filter_tiles);
-    $('#animationsEnabled').change(toggleAnimations);
-    $('#openLinksInNewTab').change(toggleOpenLinksInNewTab);
-    $('.categoryToggle').click(toggleCategory);
+    $('#animationsEnabled').on('change', toggleAnimations);
+    $('#openLinksInNewTab').on('change', toggleOpenLinksInNewTab);
+    $('.categoryToggle').on('click', toggleCategory);
+
+    $('#animationsEnabled-legacy').on('change', highlightSettings);
+
+    $('#settings-gear').on('click', toggleSettings);
+    $('html').onExcept('click', '#settings *', hideSettings);
 }
 
 /* state */
@@ -47,9 +55,28 @@ function configureLinkTargets() {
 
 /* handlers */
 
+function toggleSettings() {
+    $("#settings-list").toggleClass("invisible");
+}
+
+function hideSettings() {
+    $("#settings-list").addClass("invisible");
+}
+
+function highlightSettings() {
+    // make sure this checkbox doesn't actually toggle on its own
+    $('#animationsEnabled-legacy').prop('checked', isAnimationEnabled());
+    // highlight the new setting and how to get there
+    toggleSettings();
+    $('#settings-gear').highlight();
+    $('#animationsEnabled + label').highlight();
+}
+
 function toggleAnimations() {
     var animationsEnabled = $("#animationsEnabled").is(":checked");
     localStorage.setItem('animationsEnabled', JSON.stringify(animationsEnabled));
+
+    $('#animationsEnabled-legacy').prop('checked', animationsEnabled);
 }
 
 function toggleOpenLinksInNewTab() {
@@ -96,6 +123,8 @@ function filter_tiles() {
         $('#noresults').gentleFadeOut(animated);
     }
 }
+
+/* jquery extensions */
 
 (function( $ ){
     /* gentle animations */
@@ -166,6 +195,13 @@ function filter_tiles() {
         });
         return this;
     };
+    $.fn.highlight = function() {
+        if (!$(this).hasClass("highlighted")) {
+            $(this).addClass("highlighted");
+            setTimeout(() => $(this).removeClass("highlighted"), 1000);
+        }
+        return this;
+    };
 
     /* util */
 
@@ -179,4 +215,15 @@ function filter_tiles() {
             || _.includes(this.find(".link").text(), searchText)
             || _.includes(this.find(".link").attr("href"), searchText);
     };
+
+    /* event */
+
+    $.fn.onExcept = function(eventName, exceptSelector, func) {
+        return $(this).on(eventName, e => {
+            if (!$(e.target).is(exceptSelector)) {
+                func(e);
+            }
+        });
+    };
+
 })(jQuery);

@@ -1,19 +1,32 @@
 extends layout
 
 block content
+    noscript
+        style(type='text/css').
+            .noscript {
+                display: none; 
+            }
     h1 
         | Common Internal Microsoft Portals
         br
         a(href="https://aka.ms/mssites") aka.ms/mssites
-    input#searchbar(type="search", placeholder="Search here", autofocus)
-    #noresults No results!
-    #animations
-        input#animationsEnabled(type="checkbox", class="css-checkbox")
-        label(for="animationsEnabled", class="css-label") enable animations
-        br
-        input#openLinksInNewTab(type="checkbox", class="css-checkbox")
-        label(for="openLinksInNewTab", class="css-label") open links in new tab
-    #error
+    header(class="noscript")
+        input#searchbar(type="search", placeholder="Search here", autofocus)
+        #settings
+            button#settings-gear(class="gear highlightable")
+                img(src="/images/gear.png", class="clickable-image")
+            #settings-list(class="floating-dropdown invisible")
+                .setting
+                    input#animationsEnabled(type="checkbox", class="css-checkbox")
+                    label(for="animationsEnabled", class="css-label highlightable") enable animations
+                .setting
+                    input#openLinksInNewTab(type="checkbox", class="css-checkbox")
+                    label(for="openLinksInNewTab", class="css-label") open links in new tab
+        #animations
+            input#animationsEnabled-legacy(type="checkbox", class="css-checkbox")
+            label(for="animationsEnabled-legacy", class="css-label") enable animations
+        #error
+        #noresults No results!
     #main(role="main")
         each categoryGroup in sitesGroupedByCategory
             +category(categoryGroup)
@@ -23,10 +36,14 @@ block content
         |  or just 
         a(href="mailto:1e6bf067.microsoft.com@amer.teams.ms") send an email
         |  for bug reports, site suggestions, and feature requests.
+        br
+        | We're open source! See our code and contribute on  
+        a(href="https://aka.ms/mssites_source") VSTS
+        | .
 
 mixin category(categoryGroup)
     .categorySection
-        span(class="categoryToggle")= "\u25BC"
+        span(class="categoryToggle noscript")= "\u25BC"
         span(class="categoryTitle")= categoryGroup.category
         hr(color="black" size="6" align="left")
         .sites
