@@ -342,7 +342,7 @@
     },
     {
         "title": "Account Management Tool",
-        "description": "Create and manage system accounts (internal only).",
+        "description": "Create and manage system accounts or create an EasyId (internal only).",
         "link": "https://amtweb/",
         "link_readable": "//amtweb",
         "color": "yellow",
@@ -670,5 +670,25 @@
         "symbol": "Ar",
         "category": "Perks",
         "priority": 6
+    },
+    {
+        "title": "Strike",
+        "description": "Take courses to learn security best practices (internal only).",
+        "link": "https://strike/",
+        "link_readable": "aka.ms/strike",
+        "color": "red",
+        "symbol": "ST",
+        "category": "Security",
+        "priority": 3
+    },
+    {
+        "title": "Stuff on Campus",
+        "description": "A list of interesting things on Microsoft's campus.",
+        "link": "https://microsoft.sharepoint.com/teams/InterestingThingsOnCampus/Shared%20Documents/stuff_on_campus.aspx",
+        "link_readable": "aka.ms/stuffoncampus",
+        "color": "green",
+        "symbol": "SC",
+        "category": "Perks",
+        "priority": 5
     }
 ]
