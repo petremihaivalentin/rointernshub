@@ -210,10 +210,10 @@ function filter_tiles() {
     };
 
     $.fn.includesSearch = function (searchText) {
-        return _.includes(this.find(".title").text(), searchText)
-            || _.includes(this.find(".description").text(), searchText)
-            || _.includes(this.find(".link").text(), searchText)
-            || _.includes(this.find(".link").attr("href"), searchText);
+        return _.includes(_.toLower(this.find(".title").text()), searchText)
+            || _.includes(_.toLower(this.find(".description").text()), searchText)
+            || _.includes(_.toLower(this.find(".link").text()), searchText)
+            || _.includes(_.toLower(this.find(".link").attr("href")), searchText);
     };
 
     /* event */
