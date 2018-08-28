@@ -213,7 +213,8 @@ function filter_tiles() {
         return _.includes(_.toLower(this.find(".title").text()), searchText)
             || _.includes(_.toLower(this.find(".description").text()), searchText)
             || _.includes(_.toLower(this.find(".link").text()), searchText)
-            || _.includes(_.toLower(this.find(".link").attr("href")), searchText);
+            || _.includes(_.toLower(this.find(".link").attr("href")), searchText)
+            || _.includes(_.toLower(this.find(".category").text()), searchText);
     };
 
     /* event */

@@ -14,6 +14,8 @@ html.no-js
             | Please <a href="http://browsehappy.com/">upgrade your browser</a>
             | to improve your experience.
         <![endif]-->
+        // disable javascript if this syntax isn't supported (as in IE)
+        script try { eval("x = () => 0"); } catch(err) { document.write("<style>.noscript { display: none }</style>"); }
         block content
         script(src="https://code.jquery.com/jquery-3.2.1.min.js" 
                     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
