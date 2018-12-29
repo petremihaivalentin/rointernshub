@@ -15,8 +15,6 @@ function initState() {
     $('#animationsEnabled').prop('checked', isAnimationEnabled());
     $('#openLinksInNewTab').prop('checked', shouldOpenLinksInNewTab());
 
-    $('#animationsEnabled-legacy').prop('checked', isAnimationEnabled());
-
     if (shouldOpenLinksInNewTab()) {
         configureLinkTargets();
     }
@@ -27,8 +25,6 @@ function initHandlers() {
     $('#animationsEnabled').on('change', toggleAnimations);
     $('#openLinksInNewTab').on('change', toggleOpenLinksInNewTab);
     $('.categoryToggle').on('click', toggleCategory);
-
-    $('#animationsEnabled-legacy').on('change', highlightSettings);
 
     $('#settings-gear').on('click', toggleSettings);
     $('html').onExcept('click', '#settings *', hideSettings);
@@ -63,20 +59,9 @@ function hideSettings() {
     $("#settings-list").addClass("invisible");
 }
 
-function highlightSettings() {
-    // make sure this checkbox doesn't actually toggle on its own
-    $('#animationsEnabled-legacy').prop('checked', isAnimationEnabled());
-    // highlight the new setting and how to get there
-    toggleSettings();
-    $('#settings-gear').highlight();
-    $('#animationsEnabled + label').highlight();
-}
-
 function toggleAnimations() {
     var animationsEnabled = $("#animationsEnabled").is(":checked");
     localStorage.setItem('animationsEnabled', JSON.stringify(animationsEnabled));
-
-    $('#animationsEnabled-legacy').prop('checked', animationsEnabled);
 }
 
 function toggleOpenLinksInNewTab() {
