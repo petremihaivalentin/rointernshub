@@ -30,10 +30,10 @@
         "priority": 6
     },
     {
-        "title": "IT Web",
+        "title": "CSE Web",
         "description": "Find service alerts, create service request, PC setup, direct access, and more from Microsoft IT.",
-        "link": "https://microsoft.sharepoint.com/sites/itweb/",
-        "link_readable": "aka.ms/itweb",
+        "link": "https://microsoft.sharepoint.com/sites/cseweb",
+        "link_readable": "aka.ms/cseweb",
         "color": "green",
         "symbol": "IT",
         "category": "Support",
@@ -41,9 +41,9 @@
     },
     {
         "title": "HR Web",
-        "description": "Manage your benefits, performance reviews, and career development (internal only).",
-        "link": "http://hrweb/Pages/default.aspx",
-        "link_readable": "//hrweb",
+        "description": "Manage your benefits, performance reviews, and career development.",
+        "link": "https://microsoft.sharepoint.com/sites/hrw/",
+        "link_readable": "aka.ms/hrweb",
         "color": "orange",
         "symbol": "HR",
         "category": "Career",
@@ -223,7 +223,7 @@
     {
         "title": "Products Web",
         "description": "Download virtually any Microsoft product, from DOS 3.1 to Visual Studio 2017 (internal only).",
-        "link": "http://productsweb/",
+        "link": "https://productsweb/",
         "link_readable": "//productsweb",
         "color": "green",
         "symbol": "P",
@@ -264,7 +264,7 @@
         "title": "Manage Point HR",
         "description": "View employee profiles and download your badge photo (internal only).",
         "link": "https://managepointhr/Pages/default.aspx",
-        "link_readable": "//managepointhr/Pages/default.aspx",
+        "link_readable": "//managepointhr",
         "color": "blue",
         "symbol": "M",
         "category": "Career",
@@ -328,7 +328,7 @@
         "color": "pink",
         "symbol": "W",
         "category": "Software",
-        "priority": 8
+        "priority": 1
     },
     {
         "title": "Install Office",
@@ -345,7 +345,7 @@
         "description": "Create and manage system accounts or create an EasyId (internal only).",
         "link": "https://amtweb/",
         "link_readable": "//amtweb",
-        "color": "yellow",
+        "color": "darkblue",
         "symbol": "A",
         "category": "Security",
         "priority": 8
@@ -373,7 +373,7 @@
     {
         "title": "URL Management",
         "description": "Create short and vanity URLs.",
-        "link": "https://urlmanager.cloudapp.net/app/html/index.html",
+        "link": "https://sftools.trafficmanager.net/am/redirection/home",
         "link_readable": "aka.ms",
         "color": "pink",
         "symbol": "U",
@@ -402,12 +402,12 @@
     },
     {
         "title": "My Setup",
-        "description": "View your Exchange and Skype configuration (internal only).",
-        "link": "http://mysetup/",
-        "link_readable": "//mysetup",
+        "description": "View your Exchange and Skype configuration.",
+        "link": "https://preview.web.powerapps.com/webplayer/app?appId=%2fproviders%2fMicrosoft.PowerApps%2fapps%2fdbee1294-8ffd-49e8-94cf-a5e4c65299f7",
+        "link_readable": "aka.ms/mysetup",
         "color": "green",
         "symbol": "SA",
-        "category": "Security",
+        "category": "Support",
         "priority": 7
     },
     {
@@ -443,8 +443,8 @@
     {
         "title": "MS Travel",
         "description": "Book flights, trains, and other transportation for business trips.",
-        "link": "https://www.concursolutions.com/home.asp",
-        "link_readable": "aka.ms/travel",
+        "link": "https://microsoft.sharepoint.com/teams/MyTravel",
+        "link_readable": "aka.ms/mstravel",
         "color": "orange",
         "symbol": "TR",
         "category": "Transportation",
@@ -453,7 +453,7 @@
     {
         "title": "Helpdesk Phonelist",
         "description": "Get the phone numbers for tech support and helpdesk.",
-        "link": "https://microsoft.service-now.com/it/phone_list.do",
+        "link": "https://microsoft.service-now.com/sp?id=call",
         "link_readable": "aka.ms/callhelp",
         "color": "blue",
         "symbol": "T",
@@ -464,7 +464,7 @@
         "title": "Connector",
         "description": "Make daily reservations for your commute to/from work.",
         "link": "https://www.connectorride.com/",
-        "link_readable": "//connectorride.com",
+        "link_readable": "connectorride.com",
         "color": "orange",
         "symbol": "C",
         "category": "Transportation",
@@ -513,8 +513,8 @@
     {
         "title": "Interns",
         "description": "Events, links, and resources for interns.",
-        "link": "https://microsoft.sharepoint.com/teams/microsoft_intern/SitePages/Home.aspx",
-        "link_readable": "aka.ms/interns",
+        "link": "https://microsoft.sharepoint.com/teams/MicrosoftInterns/SitePages/Home.aspx",
+        "link_readable": "aka.ms/internz",
         "color": "purple",
         "symbol": "I",
         "category": "Career",
@@ -624,8 +624,8 @@
     {
         "title": "SAW Wiki",
         "description": "Learn about Secure Admin Workstations and get help.",
-        "link": "https://microsoft.sharepoint.com/teams/AzureSecurityCompliance/Security/SitePages/SAW%20Wiki.aspx",
-        "link_readable": "aka.ms/cnesaw",
+        "link": "https://strikecommunity.azurewebsites.net/articles/680/secure-access-workstation-saw.html",
+        "link_readable": "aka.ms/sawhelp",
         "color": "red",
         "symbol": "S",
         "category": "Support",
@@ -689,6 +689,66 @@
         "color": "green",
         "symbol": "SC",
         "category": "Perks",
+        "priority": 5
+    },
+    {
+        "title": "Third Party Software",
+        "description": "Find approved 3rd party software installs and licenses.",
+        "link": "https://microsoft.sharepoint.com/sites/itweb/software/thirdpartysoftware/pages/home.aspx",
+        "link_readable": "aka.ms/thirdpartysoftware",
+        "color": "purple",
+        "symbol": "3",
+        "category": "Software",
+        "priority": 5
+    },
+    {
+        "title": "Smart Card Support",
+        "description": "Get help obtaining and troubleshooting smart cards.",
+        "link": "https://microsoft.sharepoint.com/teams/CESecEngineering/ServiceEngineering/C%20E%20Security%20Customer%20Services/SitePages/Smart%20Card%20Support%20Services.aspx",
+        "link_readable": "aka.ms/amescsupport",
+        "color": "yellow",
+        "symbol": "SC",
+        "category": "Security",
+        "priority": 5
+    },
+    {
+        "title": "Self-Service Password Management",
+        "description": "Reset your password using your smart card or phone authentication.",
+        "link": "https://sspm.microsoft.com/",
+        "link_readable": "aka.ms/sspm",
+        "color": "darkgreen",
+        "symbol": "PM",
+        "category": "Security",
+        "priority": 5
+    },
+    {
+        "title": "Comfy",
+        "description": "Control the temperature in your office with this virtual thermostat.",
+        "link": "https://azure.comfyapp.com/",
+        "link_readable": "aka.ms/comfy",
+        "color": "indigo",
+        "symbol": "C",
+        "category": "MSFT",
+        "priority": 6
+    },
+    {
+        "title": "Azure Internal Portal",
+        "description": "Have Microsoft pay your team's Azure bill.",
+        "link": "https://microsoft.sharepoint.com/teams/azureinternal/SitePages/Home.aspx",
+        "link_readable": "aka.ms/azureinternal",
+        "color": "darkblue",
+        "symbol": "AI",
+        "category": "Hosting",
+        "priority": 5
+    },
+    {
+        "title": "Azure Spend",
+        "description": "Track your team's monthly Azure expenditure.",
+        "link": "https://azurespend.msftcloudes.com/azurespend",
+        "link_readable": "aka.ms/azurespend",
+        "color": "darkgreen",
+        "symbol": "AS",
+        "category": "Hosting",
         "priority": 5
     }
 ]
