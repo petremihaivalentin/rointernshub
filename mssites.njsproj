@@ -22,7 +22,6 @@
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Compile Include="app.js" />
-    <Compile Include="gulpfile.js" />
     <Content Include="public\favicon.ico" />
     <Compile Include="routes\index.js" />
     <Content Include="views\error.pug" />
