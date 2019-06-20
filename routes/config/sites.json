@@ -713,7 +713,7 @@
     },
     {
         "title": "Self-Service Password Management",
-        "description": "Reset your password using your smart card or phone authentication.",
+        "description": "Reset your password using your smart card or phone auth.",
         "link": "https://sspm.microsoft.com/",
         "link_readable": "aka.ms/sspm",
         "color": "darkgreen",

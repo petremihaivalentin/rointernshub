@@ -178,8 +178,8 @@ button[disabled], input[disabled] { cursor: default; }
  */
 
 /*input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }*/
-/* input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; } */
-/* input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; } */
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
 
 /*
  * Remove inner padding and border in FF3/4: h5bp.com/l
@@ -239,11 +239,16 @@ html,body {
 h1 {
     font-weight: 200;
     font-size: 50px;
-    background-color: Gainsboro;
+    background-color: #f7f7f7;
     text-align: center;
    
     padding-top: 20px;
     padding-bottom: 20px;
+
+    white-space: nowrap;
+    box-shadow: 2.42px 4.37px 5px 0px rgba(0, 0, 0, 0.28);
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.1);  
 }
 
 h1 a:link, h1 a:visited, h1 a:hover, h1 a:active {
@@ -358,7 +363,7 @@ footer {
 .listing {
     opacity:  1;
     border-color: black;
-    background-color: #ffffff;
+    background-color: #f7f7f7;
     display: inline-block;
     text-align: left;
     overflow-x:  hidden;
@@ -371,7 +376,7 @@ footer {
     margin-right: 20px;
     margin-bottom: 20px;
     
-        white-space: nowrap;
+    white-space: nowrap;
     box-shadow: 2.42px 4.37px 5px 0px rgba(0, 0, 0, 0.28);
     border-radius: 20px;
     border: 1px solid rgba(0,0,0,0.1);
@@ -476,7 +481,7 @@ footer {
 
 .floating-dropdown {
     position: absolute;
-    background-color: Gainsboro;;
+    background-color: #f7f7f7;
     padding: 5px;
     border-radius: 5px;
     margin-top: 5px;
