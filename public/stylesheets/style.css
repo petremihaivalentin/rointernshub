@@ -278,6 +278,7 @@ hr {
     font-size: 0px;
     margin-top: 20px;
     margin-right: -20px;
+    color:white;
 }
 
 #error {
@@ -302,7 +303,7 @@ hr {
 
 #searchbar {
     box-shadow: inset 0 1px 3px 0 hsla(0, 0%, 0%, 0.38);
-    border-radius: 10px;
+    border-radius: 6px;
     outline: none;
     border:none;
     padding:5px 20px;
@@ -368,7 +369,7 @@ footer {
     text-align: left;
     overflow-x:  hidden;
     overflow-y:  auto;
-
+    color:black;
     width: 398px;
     height: 120px;
     padding-left: 15px;
@@ -378,7 +379,7 @@ footer {
     
     white-space: nowrap;
     box-shadow: 2.42px 4.37px 5px 0px rgba(0, 0, 0, 0.28);
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid rgba(0,0,0,0.1);
 }
 

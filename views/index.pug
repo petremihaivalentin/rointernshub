@@ -42,7 +42,7 @@ mixin category(categoryGroup)
     .categorySection
         span(class="categoryToggle noscript")= "\u25BC"
         span(class="categoryTitle")= categoryGroup.category
-        hr(color="black" size="6" align="left")
+        hr(color="white" size="6" align="left")
         .sites
             each site in categoryGroup.sites
                 +listing(site)
