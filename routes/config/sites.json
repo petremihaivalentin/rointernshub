@@ -1,5 +1,25 @@
 [
     {
+        "title": "Microsoft internal search",
+        "description": "Search for any internal company webpage or file on OneDrive. Also available on MSW.",
+        "link": "https://microsoft.sharepoint.com/teams/mswhub/_layouts/15/search.aspx",
+        "link_readable": "aka.ms/search",
+        "color": "red",
+        "symbol": "Sr",
+        "category": "Reference",
+        "priority": 0
+    },
+    {
+        "title": "Bing with Microsoft Search",
+        "description": "Search the web plus Microsoft internal info - click \"Show results from Microsoft\"",
+        "link": "https://www.bing.com/",
+        "link_readable": "bing.com",
+        "color": "yellow",
+        "symbol": "B",
+        "category": "Reference",
+        "priority": 0
+    },
+    {
         "title": "Microsoft Web (MSW)",
         "description": "The company portal home page. Start here and search for any company related resource.",
         "link": "https://microsoft.sharepoint.com/sites/msw",
@@ -52,7 +72,7 @@
     {
         "title": "Paystub",
         "description": "View your paystub.",
-        "link": "https://hrprofile.microsoft.com/Paystub/Index/",
+        "link": "https://hrprofile.microsoft.com/Paystub",
         "link_readable": "aka.ms/pay",
         "color": "green",
         "symbol": "$",
@@ -71,8 +91,8 @@
     },
     {
         "title": "Glossary",
-        "description": "Find definition of terms and acronyms.",
-        "link": "https://microsoft.sharepoint.com/sites/msw/Company/Glossary/",
+        "description": "Find definition of terms and acronyms and submit your own.",
+        "link": "https://microsoft.sharepoint.com/teams/MSWHub/SitePages/Glossary.aspx",
         "link_readable": "aka.ms/glossary",
         "color": "pink",
         "symbol": "G",
@@ -80,8 +100,18 @@
         "priority": 2
     },
     {
-        "title": "Merge",
-        "description": "Book shuttles, reserve seats on the connector, and view fixed schedules to off-campus buildings.",
+        "title": "Micropedia",
+        "description": "A wiki that defines many things Microsoft.",
+        "link": "https://micropedia.visualstudio.com/micropedia/_orgWiki/wikis/Micropedia.wiki",
+        "link_readable": "aka.ms/micropedia",
+        "color": "green",
+        "symbol": "MP",
+        "category": "Reference",
+        "priority": 2
+    },
+    {
+        "title": "MERGE",
+        "description": "Book shuttles between Seattle-area buildings; reserve Connector bus seats; view fixed shuttle schedules.",
         "link": "https://merge.microsoft.com/",
         "link_readable": "aka.ms/merge",
         "color": "green",
@@ -133,8 +163,8 @@
     {
         "title": "Direct Deposit",
         "description": "Set up your direct deposit.",
-        "link": "https://hrprofile.microsoft.com/Directdeposit/Index/",
-        "link_readable": "//directdeposit",
+        "link": "https://hrprofile.microsoft.com/DirectDeposit",
+        "link_readable": "aka.ms/directdeposit",
         "color": "darkgreen",
         "symbol": "$$",
         "category": "Career",
@@ -151,9 +181,19 @@
         "priority": 0
     },
     {
-        "title": "Orca",
-        "description": "Get an Orca Card for free public transportation.",
-        "link": "https://microsoft.sharepoint.com/sites/refweb/NA/Redmond/Transportation/Pages/default.aspx",
+        "title": "Microsoft Zoom",
+        "description": "Commuter information and benefits for San Francisco Bay Area and some Seattle area employees.",
+        "link": "http://microsoftzoom.com/",
+        "link_readable": "microsoftzoom.com",
+        "color": "blue",
+        "symbol": "Z",
+        "category": "Transportation",
+        "priority": 2
+    },
+    {
+        "title": "ORCA",
+        "description": "Get an ORCA card for free public transportation in the Seattle area.",
+        "link": "https://microsoft.sharepoint.com/teams/TransportationRedmond/SitePages/TransportationDefault.aspx",
         "link_readable": "aka.ms/commute",
         "color": "blue",
         "symbol": "R",
@@ -202,8 +242,8 @@
     },
     {
         "title": "The Commons",
-        "description": "Explore restaurants, shops, and events at the Commons.",
-        "link": "https://microsoft.sharepoint.com/sites/refweb/na/Redmond/TheCommons",
+        "description": "Explore restaurants, shops, and events at the Commons, on Redmond's West Campus.",
+        "link": "https://microsoft.sharepoint.com/teams/REFWebTheCommons/",
         "link_readable": "aka.ms/commons",
         "color": "orange",
         "symbol": "C",
@@ -241,10 +281,10 @@
         "priority": 1
     },
     {
-        "title": "Resource Access Manager",
+        "title": "MyAccess",
         "description": "Make requests for access to code, websites, and other secure data (internal only).",
-        "link": "https://ramweb/",
-        "link_readable": "//ramweb",
+        "link": "https://myaccess/identityiq",
+        "link_readable": "//myaccess",
         "color": "green",
         "symbol": "R",
         "category": "Security",
@@ -253,8 +293,8 @@
     {
         "title": "Delve",
         "description": "See your work profile and view email analytics.",
-        "link": "https://ppe.delve.office.com/",
-        "link_readable": "ppe.delve.office.com",
+        "link": "https://delve.office.com/",
+        "link_readable": "delve.office.com",
         "color": "red",
         "symbol": "D",
         "category": "Career",
@@ -279,16 +319,6 @@
         "symbol": "iG",
         "category": "Reference",
         "priority": 6
-    },
-    {
-        "title": "JumpStart Onboarding Experience",
-        "description": "Get up and running: enlist in code branches, install tools, and get access to resources (internal only).",
-        "link": "http://coreops/sites/Jumpstart/SitePages/Home.aspx",
-        "link_readable": "//jumpstart",
-        "color": "orange",
-        "symbol": "J",
-        "category": "Support",
-        "priority": 9
     },
     {
         "title": "Polyarchy",
@@ -321,12 +351,12 @@
         "priority": 7
     },
     {
-        "title": "Outlook Webmail",
+        "title": "Outlook",
         "description": "Check your email from your browser.",
-        "link": "https://outlook.office.com/owa/",
+        "link": "https://outlook.office.com/",
         "link_readable": "aka.ms/outlook",
-        "color": "pink",
-        "symbol": "W",
+        "color": "blue",
+        "symbol": "O",
         "category": "Software",
         "priority": 1
     },
@@ -351,10 +381,10 @@
         "priority": 8
     },
     {
-        "title": "Get Devices",
-        "description": "Order hardware like laptops, desktops, and peripherals for work.",
-        "link": "https://getdevices.microsoft.com/",
-        "link_readable": "getdevices.microsoft.com",
+        "title": "MyOrder",
+        "description": "Order goods for your office use, like laptops, computer peripherals, and office supplies.",
+        "link": "https://myorder.microsoft.com/",
+        "link_readable": "aka.ms/myorder",
         "color": "darkgreen",
         "symbol": "G",
         "category": "Career",
@@ -371,7 +401,7 @@
         "priority": 1
     },
     {
-        "title": "URL Management",
+        "title": "aka.ms URL Management",
         "description": "Create short and vanity URLs.",
         "link": "https://sftools.trafficmanager.net/am/redirection/home",
         "link_readable": "aka.ms",
@@ -402,8 +432,8 @@
     },
     {
         "title": "My Setup",
-        "description": "View your Exchange and Skype configuration.",
-        "link": "https://preview.web.powerapps.com/webplayer/app?appId=%2fproviders%2fMicrosoft.PowerApps%2fapps%2fdbee1294-8ffd-49e8-94cf-a5e4c65299f7",
+        "description": "View your Exchange (Outlook), Skype, and Microsoft Teams configuration.",
+        "link": "https://web.powerapps.com/apps/d4f1f094-469a-43fe-aa11-80311e3917ab",
         "link_readable": "aka.ms/mysetup",
         "color": "green",
         "symbol": "SA",
@@ -411,9 +441,9 @@
         "priority": 7
     },
     {
-        "title": "Time & Absence Reproting",
+        "title": "Time & Absence Reporting",
         "description": "Report and track vacation and sick days (internal only).",
-        "link": "http://tar/Common/Home.aspx",
+        "link": "https://tar/Common/Home.aspx",
         "link_readable": "//tar",
         "color": "darkblue",
         "symbol": "TA",
@@ -422,7 +452,7 @@
     },
     {
         "title": "ProcureWeb",
-        "description": "Buy goods and services.",
+        "description": "Learn how to buy goods and services from MyOrder and elsewhere.",
         "link": "https://microsoft.sharepoint.com/teams/ProcureWeb/Pages/Home.aspx",
         "link_readable": "aka.ms/procureweb",
         "color": "purple",
@@ -461,17 +491,7 @@
         "priority": 3
     },
     {
-        "title": "Connector",
-        "description": "Make daily reservations for your commute to/from work.",
-        "link": "https://www.connectorride.com/",
-        "link_readable": "connectorride.com",
-        "color": "orange",
-        "symbol": "C",
-        "category": "Transportation",
-        "priority": 2
-    },
-    {
-        "title": "Stack Overflow",
+        "title": "Stack Overflow at Microsoft",
         "description": "A place to ask questions about technology within Microsoft.",
         "link": "https://stackoverflow.microsoft.com/",
         "link_readable": "aka.ms/stackoverflow",
@@ -482,7 +502,7 @@
     },
     {
         "title": "Connect",
-        "description": "Receive feedback from your manager and coworkers for your annual review.",
+        "description": "Receive feedback from your manager and coworkers for your performance reviews.",
         "link": "https://msconnect.microsoft.com/",
         "link_readable": "aka.ms/msconnect",
         "color": "blue",
@@ -544,7 +564,7 @@
     {
         "title": "The Garage",
         "description": "Microsoft's own hobby workshop. Turn your ideas into shippable reality.",
-        "link": "https://microsoft.sharepoint.com/teams/garage/Pages/default.aspx",
+        "link": "https://microsoft.sharepoint.com/teams/TheGarage/SitePages/Home.aspx",
         "link_readable": "aka.ms/garage",
         "color": "red",
         "symbol": "G",
@@ -553,7 +573,7 @@
     },
     {
         "title": "Phone Registration",
-        "description": "Register your phone for two-factor auth.",
+        "description": "Register your phone for two-factor authentication.",
         "link": "https://phoneregistration.microsoft.com/",
         "link_readable": "aka.ms/ringring",
         "color": "blue",
@@ -713,7 +733,7 @@
     },
     {
         "title": "Self-Service Password Management",
-        "description": "Reset your password using your smart card or phone authentication.",
+        "description": "Reset your password using your smart card or phone auth.",
         "link": "https://sspm.microsoft.com/",
         "link_readable": "aka.ms/sspm",
         "color": "darkgreen",
@@ -750,5 +770,35 @@
         "symbol": "AS",
         "category": "Hosting",
         "priority": 5
-    }
+    },
+    {
+        "title": "Azure CloudFit",
+        "description": "Get recommendations on how to resize VMs and shutdown unused vms to lower your team's azure bill.",
+        "link": "https://cloudfit.azurewebsites.com",
+        "link_readable": "aka.ms/cloudfit",
+        "color": "darkblue",
+        "symbol": "CF",
+        "category": "Hosting",
+        "priority": 5
+    },
+    {
+        "title": "Free Xbox Ultimate",
+        "description": "Get free ultimate game pass for being a Microsoft Employee",
+        "link": "https://studiostokens.azurewebsites.net/",
+        "link_readable": "aka.ms/studiotokens",
+        "color": "darkgreen",
+        "symbol": "XB",
+        "category": "Perks",
+        "priority": 5
+    },
+    {
+        "title": "OpenWifi",
+        "description": "Register the MAC address of your IOT devices in order to access corp network",
+        "link": "https://openwifi/",
+        "link_readable": "//openwifi",
+        "color": "black",
+        "symbol": "W",
+        "category": "Security",
+        "priority": 6
+    }    
 ]

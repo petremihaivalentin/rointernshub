@@ -239,11 +239,16 @@ html,body {
 h1 {
     font-weight: 200;
     font-size: 50px;
-    background-color: Gainsboro;
+    background-color: #f7f7f7;
     text-align: center;
    
     padding-top: 20px;
     padding-bottom: 20px;
+
+    white-space: nowrap;
+    box-shadow: 2.42px 4.37px 5px 0px rgba(0, 0, 0, 0.28);
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.1);  
 }
 
 h1 a:link, h1 a:visited, h1 a:hover, h1 a:active {
@@ -253,7 +258,7 @@ h1 a:link, h1 a:visited, h1 a:hover, h1 a:active {
 }
 
 footer a:link, footer a:visited, footer a:hover, footer a:active {
-    color: black;
+    color: white;
     text-decoration: none;
     font-weight: 400;
 }
@@ -273,6 +278,7 @@ hr {
     font-size: 0px;
     margin-top: 20px;
     margin-right: -20px;
+    color:white;
 }
 
 #error {
@@ -293,9 +299,15 @@ hr {
     opacity:  0;
     display: none;
     margin-top: 10px;
+    color: white;
 }
 
 #searchbar {
+    box-shadow: inset 0 1px 3px 0 hsla(0, 0%, 0%, 0.38);
+    border-radius: 6px;
+    outline: none;
+    border:none;
+    padding:5px 20px;
     font-weight: 200;
     width: 300px;
     vertical-align: bottom;
@@ -338,6 +350,7 @@ label.css-label {
 
 footer {
     font-weight: 200;
+    color: white;
 }
 
 .categoryTitle {
@@ -353,12 +366,12 @@ footer {
 .listing {
     opacity:  1;
     border-color: black;
-    background-color: Gainsboro;
+    background-color: #f7f7f7;
     display: inline-block;
     text-align: left;
     overflow-x:  hidden;
     overflow-y:  auto;
-
+    color:black;
     width: 398px;
     height: 120px;
     padding-left: 15px;
@@ -367,6 +380,9 @@ footer {
     margin-bottom: 20px;
     
     white-space: nowrap;
+    box-shadow: 2.42px 4.37px 5px 0px rgba(0, 0, 0, 0.28);
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
 }
 
 .square {
@@ -376,7 +392,8 @@ footer {
     text-decoration: none;
     overflow: hidden;
     position: relative;
-    
+
+    border-radius: 5px;
     width: 100px;
     height: 100px;
     margin-right: 15px;
@@ -387,6 +404,7 @@ footer {
     font-size: 70px;
     color: white;
     text-align: center;
+    border-radius: 5px;
 }
 
 .pic {
@@ -466,7 +484,7 @@ footer {
 
 .floating-dropdown {
     position: absolute;
-    background-color: Gainsboro;;
+    background-color: #f7f7f7;
     padding: 5px;
     border-radius: 5px;
     margin-top: 5px;
