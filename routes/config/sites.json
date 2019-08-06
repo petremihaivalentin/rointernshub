@@ -770,5 +770,35 @@
         "symbol": "AS",
         "category": "Hosting",
         "priority": 5
-    }
+    },
+    {
+        "title": "Azure CloudFit",
+        "description": "Get recommendations on how to resize VMs and shutdown unused vms to lower your team's azure bill.",
+        "link": "https://cloudfit.azurewebsites.com",
+        "link_readable": "aka.ms/cloudfit",
+        "color": "darkblue",
+        "symbol": "CF",
+        "category": "Hosting",
+        "priority": 5
+    },
+    {
+        "title": "Free Xbox Ultimate",
+        "description": "Get free ultimate game pass for being a Microsoft Employee",
+        "link": "https://studiostokens.azurewebsites.net/",
+        "link_readable": "aka.ms/studiotokens",
+        "color": "darkgreen",
+        "symbol": "XB",
+        "category": "Perks",
+        "priority": 5
+    },
+    {
+        "title": "OpenWifi",
+        "description": "Register the MAC address of your IOT devices in order to access corp network",
+        "link": "https://openwifi/",
+        "link_readable": "//openwifi",
+        "color": "black",
+        "symbol": "W",
+        "category": "Security",
+        "priority": 6
+    }    
 ]
